@@ -68,6 +68,8 @@
 
     }
 
+    ![Image text](https://github.com/proactivefly/staticFolder/blob/master/img/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png)
+
 12、使用Charles接口模拟
 
 13、react-transition-group
