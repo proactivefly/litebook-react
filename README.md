@@ -1,9 +1,13 @@
 注意事项：
 
 1、操作数组尽量用 [...a]
+
 2、jsx中变量用{}，onClick,bind(this,params)
+
 3、Fragment 可以作为组件中根标签，不会显示成元素。
+
 4、jsx中注释 {/* 此处为注释 */}
+
 5、结构赋值
     var a={content:'内容',index:'索引'}
     const {content,index}=a
@@ -65,3 +69,19 @@
     }
 
 12、使用Charles接口模拟
+
+13、react-transition-group
+
+    <CSSTransition
+        in={this.state.show} //动画条件
+        timeout={1000}
+        className='fade'
+        unmountOnExit //执行完成后是否移除dom
+        onEntered={(el)=>{el.style.color='blue'}}
+        appear={true} //第一次展示时也执行动画效果  添加 .fade-appear,.fade-appear-active
+    >
+
+    </CssTransition>
+
+14、Redux(reducer+flux)
+
