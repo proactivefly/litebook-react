@@ -87,3 +87,38 @@
 
 14、Redux(reducer+flux)
 
+    react组件 借书的人
+    actionCreators 借书的这句话，也就是说信息
+    store 图书馆管理员
+    reducers 图书馆记录本
+
+    使用redux的流程
+
+    (1)、定义动作类型：
+
+        const INCREAMENT='INCREAMENT';
+        定义项目的默认状态，传入reducer
+
+        let initState={...};
+        编写reducer，实现更新state的具体逻辑
+        function reducer(state=initState,action){
+            let newState;
+            switch(action.type){
+                //...
+            }
+            return newState;
+        }
+
+    (2)、创建容器，传入reducer
+    let store=createStore(reducer);
+
+    (3)、订阅需要的方法，当state改变会自动更新
+    store.subscribe(function(){});
+
+    (4)、在需要更新state的地方调用dispatch即可
+    const myAction={action:'INCREAMENT',pyload:'值'}
+    store.dispatch(/*某个action*/);
+
+15、UI组件，容器组件，无状态组件(无this)
+
+    只有render函数可以用无状态组件代替
