@@ -2,7 +2,7 @@ import * as constants from './constants';
 import { fromJS } from 'immutable';
 
 const defaultState = fromJS({
-	focused: false,
+	focused: false, //输入框聚焦状态
 	mouseIn: false,
 	list: [],
 	page: 1,

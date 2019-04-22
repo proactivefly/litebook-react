@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+//react -redux store提供者
 import {Provider} from 'react-redux';
+
 import {BrowserRouter, Route} from 'react-router-dom';
 import Header from './common/header';
 import Home from './pages/home';

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
+//图片文件需要导入才能用
 import logoPic from '../../statics/logo.png';
 
+// 创建一个组件是个div标签
 export const HeaderWrapper = styled.div`
 	z-index: 1;
 	position: relative;

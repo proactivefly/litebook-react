@@ -122,3 +122,37 @@
 15、UI组件，容器组件，无状态组件(无this)
 
     只有render函数可以用无状态组件代替
+
+16、redux-thunk(桑克)
+
+    thunk函数默认参数为dispatch
+    export const getTodoList=()=>{
+        return (dispatch)=>{
+            axios.get('../').then(()=>{
+                const action=xxxx(data)
+                dispatch(action)
+            })
+        }
+    }
+
+17、react-redux
+
+     1、APP入口组件内  <provider store={store}> xxxx </provider>
+     2、组件内connect
+        export default connect(mapStateToProps, mapDispathToProps)(Header);
+
+        const mapStateToProps=( state )=>{
+         return {
+            x:state.x,
+            y:state.y
+         }
+        }
+
+        const mapDispatchToProps=(dispatch){
+            return{
+                clickHandler(){
+                    const action={xxxx}
+                    dispatch(action)
+                }
+            }
+        }

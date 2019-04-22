@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
+//引入action方法
 import { actionCreators } from './store';
+
 import { actionCreators as loginActionCreators } from '../../pages/login/store'
+//引入组件
 import {
 	HeaderWrapper,
 	Logo,
@@ -110,7 +113,7 @@ class Header extends Component {
 	}
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state) => { //负责数据维护状态
 	return {
 		focused: state.getIn(['header', 'focused']),
 		list: state.getIn(['header', 'list']),
@@ -121,7 +124,7 @@ const mapStateToProps = (state) => {
 	}
 }
 
-const mapDispathToProps = (dispatch) => {
+const mapDispathToProps = (dispatch) => { //负责维护方法
 	return {
 		handleInputFocus(list) {
 			(list.size === 0) && dispatch(actionCreators.getList());
