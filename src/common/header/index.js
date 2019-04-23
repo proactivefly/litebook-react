@@ -25,7 +25,7 @@ import {
 
 class Header extends Component {
 
-	getListArea() {
+	getListArea() { //获得热搜列表
 		const { focused, list, page, totalPage, mouseIn, handleMouseEnter, handleMouseLeave, handleChangePage } = this.props;
 		const newList = list.toJS();
 		const pageList = [];

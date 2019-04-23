@@ -156,3 +156,20 @@
                 }
             }
         }
+
+18、immutable
+
+    import { formJs } from 'immutable'
+
+    1、将普通js对象转换为immutable对象
+        const defaultState=formJs({
+            a:'xx',
+            b:'yy'
+        })
+    2、修改immutable值 用 state.set('a','value')
+
+    3、immutable转换为普通对象
+
+        jsObj.toJs()
+
+
