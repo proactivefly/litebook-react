@@ -16,7 +16,7 @@ export default (state = defaultState, action) => {
 		case constants.SEARCH_BLUR:
 			return state.set('focused', false);
 		case constants.CHANGE_LIST:
-			return state.merge({
+			return state.merge({ // state.set('list',action.data).set('totalPage',action.totalPage)
 				list: action.data,
 				totalPage: action.totalPage
 			});

@@ -113,9 +113,10 @@ class Header extends Component {
 	}
 }
 
-const mapStateToProps = (state) => { //负责数据维护状态
+const mapStateToProps = (state) => { //负责数据维护状态 state相当于store所有数据
 	return {
-		focused: state.getIn(['header', 'focused']),
+		//focsused:state.get('header').get('focused')
+		focused: state.getIn(['header', 'focused']), //获取header下focused
 		list: state.getIn(['header', 'list']),
 		page: state.getIn(['header', 'page']),
 		totalPage: state.getIn(['header', 'totalPage']),
