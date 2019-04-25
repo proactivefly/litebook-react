@@ -166,10 +166,19 @@
             a:'xx',
             b:'yy'
         })
-    2、修改immutable值 用 state.set('a','value')
 
-    3、immutable转换为普通对象
+    2、获取数据 state.getIn(['header','value']) // header下的value 等价于state.get('header').get('value')
+
+    3、修改immutable值 用 state.set('a','value')
+
+    4、state.merage({
+        x:xx,
+        y:yy
+    })
+
+    5、immutable转换为普通对象
 
         jsObj.toJs()
 
-
+19、转义html
+    dangerouslySetInnerHtml={{__html:this.props.content}}
