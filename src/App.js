@@ -20,6 +20,7 @@ class App extends Component {
             <Route path='/' exact component={Home}></Route>
             <Route path='/login' exact component={Login}></Route>
             <Route path='/write' exact component={Write}></Route>
+            {/*id为参数 match参数里*/}
             <Route path='/detail/:id' exact component={Detail}></Route>
           </div>
         </BrowserRouter>
